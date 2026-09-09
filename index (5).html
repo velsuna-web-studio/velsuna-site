@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velsuna Web Studio — Diseño web profesional para negocios</title>
+<meta name="description" content="Diseño web elegante, claro y profesional para negocios. Webs desde 299€ hasta 499€ + IVA según alcance.">
+<meta name="theme-color" content="#0b0e13">
+<link rel="canonical" href="https://velsuna.com/">
+<style>
+:root{
+  --bg:#0b0e13;
+  --bg2:#0f141b;
+  --panel:#121821;
+  --panel2:#161e29;
+  --text:#f7f8fb;
+  --muted:#aeb7c6;
+  --soft:#dbe1ec;
+  --line:rgba(255,255,255,.09);
+  --line2:rgba(255,255,255,.15);
+  --accent:#b8c7ff;
+  --accent2:#7d98ff;
+  --cream:#ede6d7;
+  --green:#94dfbc;
+  --max:1180px;
+  --shadow:0 28px 90px rgba(0,0,0,.34);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 13% -5%,rgba(125,152,255,.18),transparent 31%),
+    radial-gradient(circle at 90% 7%,rgba(237,230,215,.08),transparent 24%),
+    linear-gradient(180deg,#090c11 0%,#0b0e13 54%,#0d1219 100%);
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(calc(100% - 32px),var(--max));margin:auto}
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(9,12,17,.76);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line)
+}
+.navin{height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.02em}
+.brandmark{
+  width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
+  border:1px solid var(--line2);
+  background:linear-gradient(145deg,rgba(184,199,255,.18),rgba(255,255,255,.03));
+  font-family:Georgia,"Times New Roman",serif;font-size:21px
+}
+.brandcopy span{display:block;font:600 10px/1.2 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.links{display:flex;gap:26px;font-size:14px;color:#d7deea}
+.links a:hover{color:#fff}
+.btn{
+  min-height:48px;padding:0 20px;border-radius:999px;border:1px solid var(--line2);
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-weight:700;font-size:14px;transition:.22s ease
+}
+.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.28)}
+.btn.primary{background:#f4f6fb;color:#0b0e13;border-color:#f4f6fb}
+.btn.soft{background:rgba(255,255,255,.04)}
+.hero{padding:108px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.16fr .84fr;gap:62px;align-items:end}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  color:#d8e0ff;font:700 11px/1 Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase
+}
+.eyebrow:before{content:"";width:26px;height:1px;background:var(--accent)}
+.title{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(54px,8vw,100px);line-height:.93;letter-spacing:-.05em;
+  margin:18px 0 28px;max-width:930px
+}
+.lead{max-width:720px;font-size:clamp(18px,2vw,21px);color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trustline{display:flex;align-items:center;gap:11px;color:var(--muted);font-size:13px;margin-top:28px}
+.statusdot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 7px rgba(148,223,188,.08)}
+.hero-card{
+  border:1px solid var(--line);border-radius:30px;padding:16px;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.022));
+  box-shadow:var(--shadow)
+}
+.browser{overflow:hidden;border-radius:20px;background:#efe9de;color:#121212;min-height:470px}
+.browserbar{height:44px;background:#dcd6cc;display:flex;align-items:center;gap:7px;padding:0 15px}
+.dot{width:8px;height:8px;border-radius:50%;background:#aaa}
+.browserbody{padding:50px 34px}
+.browserbody small{font:700 9px/1 Inter,ui-sans-serif,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.17em}
+.browserbody h2{font-family:Georgia,"Times New Roman",serif;font-size:44px;line-height:.97;letter-spacing:-.035em;margin:20px 0 16px}
+.browserbody p{font-size:13px;color:#606060;max-width:340px;margin:0 0 24px}
+.mini-btn{display:inline-flex;background:#111;color:white;padding:11px 15px;border-radius:999px;font-size:12px;font-weight:700}
+.trustbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trustgrid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trustitem{padding:24px 20px;border-right:1px solid var(--line)}
+.trustitem:last-child{border-right:0}
+.trustitem strong{display:block;font-size:15px;margin-bottom:4px}
+.trustitem span{font-size:12px;color:var(--muted)}
+.section{padding:108px 0}
+.h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.038em;margin:14px 0 0
+}
+.sectionlead{font-size:18px;color:var(--muted);max-width:680px;margin-top:20px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.card{
+  border:1px solid var(--line);border-radius:26px;padding:28px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  transition:.25s ease
+}
+.card:hover{transform:translateY(-5px);border-color:rgba(184,199,255,.28)}
+.cardnum{font-family:Georgia,"Times New Roman",serif;font-size:28px;color:var(--accent)}
+.card h3{margin:28px 0 9px;font-size:20px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px}
+.note{font-size:12px;color:var(--muted);max-width:360px}
+.demos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.demo{border:1px solid var(--line);border-radius:28px;overflow:hidden;background:#111720;transition:.28s ease}
+.demo:hover{transform:translateY(-7px);border-color:rgba(255,255,255,.22)}
+.visual{aspect-ratio:4/3;padding:17px;background:#151b24}
+.screen{height:100%;border-radius:16px;padding:27px}
+.screen small{font-size:9px;letter-spacing:.15em;text-transform:uppercase}
+.screen h3{font-family:Georgia,"Times New Roman",serif;font-size:31px;line-height:1;margin:14px 0}
+.elan{background:linear-gradient(145deg,#f0eadf,#cdbcaa);color:#121212}
+.fora{background:linear-gradient(145deg,#131c20,#3a4c53)}
+.lumen{background:linear-gradient(145deg,#efe4d4,#8a3944)}
+.demobody{padding:21px}
+.demotop{display:flex;justify-content:space-between;gap:14px;align-items:center}
+.tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:6px 9px;color:var(--muted)}
+.view{font-size:12px;font-weight:700;color:#d9e1ff}
+.demobody h3{margin:12px 0 7px;font-size:21px}
+.demobody p{font-size:13px;color:var(--muted);margin:0}
+.pricebox{
+  margin-top:42px;border:1px solid rgba(184,199,255,.28);border-radius:32px;
+  padding:36px;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(125,152,255,.15),transparent 30%),
+    linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center
+}
+.range{font-family:Georgia,"Times New Roman",serif;font-size:clamp(48px,7vw,84px);line-height:.95;letter-spacing:-.04em}
+.range small{font-family:Inter,ui-sans-serif,system-ui,sans-serif;display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.inclusions{display:grid;gap:12px}
+.check{display:flex;gap:11px;align-items:flex-start;color:#dce2ed;font-size:14px}
+.check:before{content:"✓";color:var(--green);font-weight:700}
+.subnote{margin-top:18px;font-size:12px;color:var(--muted)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
+.step{padding:24px;border-top:1px solid var(--line)}
+.step b{font-family:Georgia,"Times New Roman",serif;font-size:34px;color:var(--accent)}
+.step h3{margin:20px 0 8px;font-size:17px}
+.step p{font-size:13px;color:var(--muted);margin:0}
+.assurance{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:42px}
+.assurance .card{min-height:220px}
+.assurance .card h3{margin-top:14px}
+.bigicon{font-size:26px}
+.faq{max-width:880px;margin:42px auto 0}
+details{border-top:1px solid var(--line);padding:20px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;display:flex;justify-content:space-between;gap:20px}
+details p{font-size:14px;color:var(--muted);max-width:760px}
+.cta{
+  border:1px solid var(--line);border-radius:34px;padding:52px;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(184,199,255,.18),transparent 30%),
+    linear-gradient(135deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+  display:grid;grid-template-columns:1fr auto;gap:34px;align-items:center
+}
+.cta h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(38px,5vw,62px);line-height:1;margin:0 0 14px}
+.cta p{color:var(--muted);max-width:620px;margin:0}
+.contactnote{text-align:center;color:var(--muted);font-size:12px;margin-top:14px}
+footer{border-top:1px solid var(--line);padding:40px 0;margin-top:88px}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap}
+.footmeta{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.legal{margin-top:18px;font-size:11px;color:#7f8999;display:flex;gap:12px;flex-wrap:wrap}
+.legal a{text-decoration:underline;text-underline-offset:3px}
+.reveal{opacity:0;transform:translateY(15px);transition:.65s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:940px){
+  .links{display:none}
+  .hero-grid,.pricebox{grid-template-columns:1fr}
+  .services,.demos{grid-template-columns:1fr}
+  .process{grid-template-columns:1fr 1fr}
+  .trustgrid{grid-template-columns:1fr 1fr}
+  .trustitem:nth-child(2){border-right:0}
+  .trustitem:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .section-head{align-items:flex-start;flex-direction:column}
+  .cta{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .hero{padding-top:72px}
+  .section{padding:82px 0}
+  .title{font-size:clamp(50px,16vw,72px)}
+  .process,.assurance{grid-template-columns:1fr}
+  .trustgrid{grid-template-columns:1fr}
+  .trustitem{border-right:0;border-bottom:1px solid var(--line)!important}
+  .trustitem:last-child{border-bottom:0!important}
+  .cta,.pricebox{padding:30px 23px}
+  .navin{height:66px}
+  .brandcopy{font-size:14px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap navin">
+    <a class="brand" href="#inicio">
+      <span class="brandmark">V</span>
+      <span class="brandcopy">Velsuna <span>Web Studio</span></span>
+    </a>
+    <div class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#demos">Demos</a>
+      <a href="#precio">Precios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#confianza">Confianza</a>
+    </div>
+    <a class="btn primary" href="#contacto">Pedir presupuesto</a>
+  </div>
+</nav>
+
+<main id="inicio">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Diseño web para negocios</div>
+      <h1 class="title">Una web que haga que tu negocio <em>parezca serio.</em></h1>
+      <p class="lead">Creamos webs elegantes, rápidas y claras para negocios que quieren transmitir confianza y convertir visitas en contactos reales.</p>
+      <div class="actions">
+        <a class="btn primary" href="#demos">Ver nuestro estilo</a>
+        <a class="btn soft" href="#contacto">Solicitar presupuesto →</a>
+      </div>
+      <div class="trustline"><span class="statusdot"></span> Atención directa, presupuesto claro y proceso definido.</div>
+    </div>
+
+    <div class="hero-card reveal">
+      <div class="browser">
+        <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="browserbody">
+          <small>Tu negocio, bien presentado</small>
+          <h2>La primera impresión también vende.</h2>
+          <p>Una web limpia, profesional y pensada para que tu cliente entienda qué haces y cómo contactar contigo.</p>
+          <span class="mini-btn">Pedir presupuesto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trustbar">
+  <div class="wrap trustgrid">
+    <div class="trustitem"><strong>Presupuesto por escrito</strong><span>Sabes qué incluye antes de empezar.</span></div>
+    <div class="trustitem"><strong>Pago por fases</strong><span>50% al inicio y 50% antes de publicar.</span></div>
+    <div class="trustitem"><strong>Diseño responsive</strong><span>Preparada para móvil, tablet y ordenador.</span></div>
+    <div class="trustitem"><strong>Dominio del cliente</strong><span>Recomendamos que siempre quede a tu nombre.</span></div>
+  </div>
+</div>
+
+<section class="section" id="servicios">
+  <div class="wrap">
+    <div class="eyebrow">Qué hacemos</div>
+    <h2 class="h2">Diseñamos presencia digital,<br>no páginas por rellenar.</h2>
+    <p class="sectionlead">Cada proyecto parte de lo que necesita el negocio: explicar mejor, generar confianza, conseguir solicitudes o facilitar reservas y contacto.</p>
+
+    <div class="services">
+      <article class="card reveal"><span class="cardnum">01</span><h3>Diseño profesional</h3><p>Estética cuidada, jerarquía visual y una imagen coherente con el tipo de cliente que quieres atraer.</p></article>
+      <article class="card reveal"><span class="cardnum">02</span><h3>Conversión sencilla</h3><p>WhatsApp, llamada, formulario o reserva colocados donde tienen sentido, sin complicar la experiencia.</p></article>
+      <article class="card reveal"><span class="cardnum">03</span><h3>Base preparada para crecer</h3><p>Una estructura limpia que después puede ampliarse con nuevas páginas, idiomas o funciones.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demos">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">Demos en directo</div><h2 class="h2">Tres sectores.<br>Tres enfoques.</h2></div>
+      <p class="note">Son demos conceptuales creadas por Velsuna Web Studio para mostrar estilos y posibilidades. No representan clientes reales.</p>
+    </div>
+
+    <div class="demos">
+      <a class="demo reveal" href="https://velsuna-web-studio.github.io/elan-demo/" target="_blank" rel="noopener">
+        <div class="visual"><div class="screen elan"><small>Beauty / premium</small><h3>ÉLAN Atelier</h3></div></div>
+        <div class="demobody"><div class="demotop"><span class="tag">Belleza</span><span class="view">Ver demo ↗</span></div><h3>ÉLAN Atelier</h3><p>Imagen editorial, servicios, galería y reservas con sensación premium.</p></div>
+      </a>
+
+      <a class="demo reveal" href="https://velsuna-web-studio.github.io/fora-demo/" target="_blank" rel="noopener">
+        <div class="visual"><div class="screen fora"><small>Servicios / local</small><h3>FØRA Servicios</h3></div></div>
+        <div class="demobody"><div class="demotop"><span class="tag">Servicios</span><span class="view">Ver demo ↗</span></div><h3>FØRA Servicios</h3><p>Confianza, servicios, zonas de trabajo y solicitud de presupuesto.</p></div>
+      </a>
+
+      <a class="demo reveal" href="https://velsuna-web-studio.github.io/lumen-demo/" target="_blank" rel="noopener">
+        <div class="visual"><div class="screen lumen"><small>Hostelería / editorial</small><h3>LÚMEN</h3></div></div>
+        <div class="demobody"><div class="demotop"><span class="tag">Hostelería</span><span class="view">Ver demo ↗</span></div><h3>LÚMEN — Cocina & Café</h3><p>Concepto, carta, horarios, galería y reservas con una presentación cuidada.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="precio">
+  <div class="wrap">
+    <div class="eyebrow">Inversión clara</div>
+    <h2 class="h2">Una web profesional,<br>sin precios confusos.</h2>
+    <div class="pricebox reveal">
+      <div>
+        <div class="range">299€ – 499€<small>+ IVA · según alcance del proyecto</small></div>
+        <p class="sectionlead" style="margin-bottom:0">Antes de empezar definimos exactamente qué incluye el proyecto y te damos un presupuesto cerrado.</p>
+      </div>
+      <div>
+        <div class="inclusions">
+          <div class="check">Diseño responsive y adaptado al negocio.</div>
+          <div class="check">Estructura y llamadas a la acción.</div>
+          <div class="check">Integración de contacto o reserva acordada.</div>
+          <div class="check">Una ronda principal de revisión.</div>
+          <div class="check">Publicación y puesta online.</div>
+        </div>
+        <div class="subnote">Dominio, traducciones extensas, servicios externos o funciones avanzadas se valoran aparte cuando sean necesarios.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="proceso">
+  <div class="wrap">
+    <div class="eyebrow">Proceso</div>
+    <h2 class="h2">Sabes qué ocurre<br>en cada momento.</h2>
+    <div class="process">
+      <div class="step reveal"><b>01</b><h3>Briefing</h3><p>Entendemos el negocio, el objetivo, el estilo y el contenido necesario.</p></div>
+      <div class="step reveal"><b>02</b><h3>Propuesta</h3><p>Cerramos alcance, precio y condiciones antes de empezar.</p></div>
+      <div class="step reveal"><b>03</b><h3>Diseño y revisión</h3><p>Preparamos la primera versión y aplicamos la revisión acordada.</p></div>
+      <div class="step reveal"><b>04</b><h3>Publicación</h3><p>Revisión final, pago restante y puesta online.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="confianza">
+  <div class="wrap">
+    <div class="eyebrow">Trabajar con tranquilidad</div>
+    <h2 class="h2">Profesional también significa<br>hacer las cosas claras.</h2>
+    <div class="assurance">
+      <article class="card reveal"><div class="bigicon">✓</div><h3>Sin promesas vagas</h3><p>El alcance, los cambios incluidos, el precio y el siguiente paso quedan definidos antes de iniciar el trabajo.</p></article>
+      <article class="card reveal"><div class="bigicon">⌁</div><h3>Tu negocio sigue siendo tuyo</h3><p>Recomendamos que el dominio quede a nombre del cliente y que los materiales y datos oficiales sean aprobados por su responsable.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">Preguntas frecuentes</div>
+    <div class="faq">
+      <details><summary>¿Cuánto tarda una web? <span>+</span></summary><p>Depende del alcance y de cuándo estén disponibles los textos, fotos y materiales. Después del briefing te damos una previsión realista.</p></details>
+      <details><summary>¿Puedo pedir cambios? <span>+</span></summary><p>Sí. El presupuesto indica la revisión incluida. Los cambios grandes o nuevas funciones se valoran como ampliación para evitar sorpresas.</p></details>
+      <details><summary>¿El dominio queda a mi nombre? <span>+</span></summary><p>Es lo recomendable. Podemos ayudarte a configurarlo, pero el dominio debería pertenecer al cliente.</p></details>
+      <details><summary>¿Ofrecéis mantenimiento? <span>+</span></summary><p>Sí, cuando el proyecto lo necesita se puede contratar mantenimiento y soporte por separado.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div><h2>Cuéntanos qué necesita tu negocio.</h2><p>Te diremos qué solución tiene sentido, cuánto costaría y qué incluiría antes de empezar.</p></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn primary" id="whatsapp" href="#contacto">WhatsApp</a>
+        <a class="btn soft" id="email" href="#contacto">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#inicio"><span class="brandmark">V</span><span class="brandcopy">Velsuna <span>Web Studio</span></span></a>
+      <div class="footmeta"><span>Diseño web</span><span>Negocios locales</span><span>Madrid · España</span></div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year"></span> Velsuna Web Studio.</span>
+      <a href="/legal.html#aviso-legal">Aviso Legal</a>
+      <a href="/legal.html#privacidad">Privacidad</a>
+      <a href="/legal.html#cookies">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const CONTACT = {
+  whatsapp: "34697418541",
+  email:    "info@velsuna.com"
+};
+const wa = document.getElementById("whatsapp");
+const mail = document.getElementById("email");
+if (CONTACT.whatsapp){
+  const msg = encodeURIComponent("Hola, he visto Velsuna Web Studio y quiero información para una web.");
+  wa.href = `https://wa.me/${CONTACT.whatsapp}?text=${msg}`;
+  wa.target = "_blank";
+  wa.rel = "noopener";
+}
+if (CONTACT.email){
+  mail.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent("Quiero una web para mi negocio")}`;
+}
+document.getElementById("year").textContent = new Date().getFullYear();
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
